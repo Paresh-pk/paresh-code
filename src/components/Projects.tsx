@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -16,6 +15,14 @@ const Projects: React.FC<ProjectsProps> = ({ isDark }) => {
       technologies: ["Python", "NS2", "AquaSim", "Q-Learning"],
       type: "Research",
       status: "Published"
+    },
+    {
+      title: "Mathematical Modeling of QEECCR",
+      subtitle: "Analytical modeling of QEECCR",
+      description: "This project introduces a reinforcement learning (Q-learning) based routing protocol designed specifically for UWSNs (Underwater Wireless Sensor Networks), aiming to optimize energy consumption and enhance routing stability in complex underwater environments.",
+      technologies: ["Python", "MATLAB", "Pandas"],
+      type: "Research",
+      status: "Completed"
     },
     {
       title: "Online Library Management System",
