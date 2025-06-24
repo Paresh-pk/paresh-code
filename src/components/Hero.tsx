@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({ isDark }) => {
                 isDark ? 'bg-portfolio-accent/10 text-portfolio-accent' : 'bg-portfolio-accent/20 text-portfolio-accent'
               }`}>
                 <div className="w-2 h-2 bg-portfolio-accent rounded-full mr-2 animate-pulse"></div>
-                Available for new opportunities
+                Available for opportunities
               </div>
               
               <h1 className={`text-4xl md:text-6xl font-bold leading-tight animate-slide-in ${
