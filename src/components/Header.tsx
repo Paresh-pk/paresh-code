@@ -24,8 +24,8 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
           Paresh Kumar Palai
         </div>
         
-        <nav className="hidden md:flex items-center space-x-8">
-          {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
+        <nav className="hidden lg:flex items-center space-x-6">
+          {['Home', 'About', 'Skills', 'Certifications', 'Achievements', 'Projects', 'Contact'].map((item) => (
             <button
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, toggleTheme }) => {
           <ThemeToggle isDark={isDark} toggle={toggleTheme} />
         </nav>
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <ThemeToggle isDark={isDark} toggle={toggleTheme} />
         </div>
       </div>

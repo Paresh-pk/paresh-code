@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Code, Globe, Wrench } from 'lucide-react';
 
 interface SkillsProps {
   isDark: boolean;
@@ -10,30 +12,21 @@ const Skills: React.FC<SkillsProps> = ({ isDark }) => {
   const skillCategories = [
     {
       title: 'Programming Languages',
-      skills: [
-        { name: 'Python', level: 85 },
-        { name: 'Java', level: 80 },
-        { name: 'C', level: 75 },
-        { name: 'SQL', level: 90 },
-      ]
+      icon: Code,
+      skills: ['Python', 'Java', 'C', 'SQL'],
+      color: 'from-blue-500 to-purple-600'
     },
     {
       title: 'Web Technologies',
-      skills: [
-        { name: 'HTML', level: 90 },
-        { name: 'CSS', level: 85 },
-        { name: 'JavaScript', level: 80 },
-        { name: 'PHP', level: 75 },
-      ]
+      icon: Globe,
+      skills: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+      color: 'from-green-500 to-teal-600'
     },
     {
       title: 'Tools & Platforms',
-      skills: [
-        { name: 'MySQL', level: 85 },
-        { name: 'LaTeX', level: 70 },
-        { name: 'Git', level: 80 },
-        { name: 'Linux', level: 75 },
-      ]
+      icon: Wrench,
+      skills: ['MySQL', 'LaTeX', 'Git', 'Linux'],
+      color: 'from-orange-500 to-red-600'
     }
   ];
 
@@ -41,40 +34,55 @@ const Skills: React.FC<SkillsProps> = ({ isDark }) => {
     <section id="skills" className={`py-20 ${isDark ? 'bg-portfolio-card-dark' : 'bg-gray-50'}`}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className={`text-4xl font-bold mb-4 ${isDark ? 'text-white' : 'text-gray-900'}`}>
+          <h2 className={`text-4xl font-bold mb-4 animate-fade-in ${isDark ? 'text-white' : 'text-gray-900'}`}>
             Skills & Technologies
           </h2>
           <div className="w-20 h-1 bg-portfolio-accent mx-auto rounded-full"></div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => (
-            <Card key={index} className={`p-6 transition-all duration-300 hover:scale-105 ${
-              isDark ? 'bg-portfolio-dark border-white/10' : 'bg-white border-gray-200'
-            }`}>
-              <CardContent className="p-0">
-                <h3 className={`text-xl font-semibold mb-6 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  {category.title}
-                </h3>
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex}>
-                      <div className={`flex justify-between mb-2 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-                        <span className="font-medium">{skill.name}</span>
-                        <span className="text-sm">{skill.level}%</span>
-                      </div>
-                      <div className={`w-full bg-gray-200 rounded-full h-2 ${isDark ? 'bg-gray-700' : 'bg-gray-200'}`}>
-                        <div
-                          className="bg-portfolio-accent h-2 rounded-full transition-all duration-1000 ease-out"
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
+          {skillCategories.map((category, index) => {
+            const IconComponent = category.icon;
+            return (
+              <Card key={index} className={`group relative overflow-hidden transition-all duration-300 hover:scale-105 hover:-translate-y-2 ${
+                isDark ? 'bg-portfolio-dark border-white/10 hover:border-portfolio-accent/50' : 'bg-white border-gray-200 hover:border-portfolio-accent/50'
+              }`}>
+                <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-5 group-hover:opacity-10 transition-opacity`}></div>
+                
+                <CardContent className="relative p-8">
+                  <div className="text-center mb-6">
+                    <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 ${
+                      isDark ? 'bg-portfolio-accent/10' : 'bg-portfolio-accent/20'
+                    } group-hover:scale-110 transition-transform`}>
+                      <IconComponent className="w-8 h-8 text-portfolio-accent" />
                     </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                    <h3 className={`text-xl font-semibold group-hover:text-portfolio-accent transition-colors ${
+                      isDark ? 'text-white' : 'text-gray-900'
+                    }`}>
+                      {category.title}
+                    </h3>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {category.skills.map((skill, skillIndex) => (
+                      <Badge
+                        key={skillIndex}
+                        variant="outline"
+                        className={`px-3 py-1 transition-all duration-300 hover:scale-110 cursor-default animate-fade-in ${
+                          isDark 
+                            ? 'border-white/20 text-gray-300 hover:border-portfolio-accent hover:text-portfolio-accent' 
+                            : 'border-gray-300 text-gray-700 hover:border-portfolio-accent hover:text-portfolio-accent'
+                        }`}
+                        style={{animationDelay: `${skillIndex * 0.1}s`}}
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
