@@ -18,16 +18,7 @@ const About: React.FC<AboutProps> = ({
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-              I am a passionate data enthusiast currently pursuing my Master's in Computer Applications (MCA) 
-              at Tripura University. With a strong foundation in mathematics and programming, I'm dedicated 
-              to transforming raw data into meaningful insights that drive informed decision-making.
-            </p>
-            
-            <p className={`text-lg leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-              My journey in data science combines academic rigor with practical application, focusing on 
-              machine learning, statistical analysis, and data visualization. I believe in the power of 
-              data to solve real-world problems and am constantly exploring new technologies and methodologies 
-              in this rapidly evolving field.
+              Machine Learning Engineer with hands-on experience building predictive models and scalable APIs using Python and scikit-learn. Proficient in data preprocessing, statistical modeling, and cloud deployment, including developing production-ready ML services. Demonstrated success in projects across real estate, IoT, and e-commerce analytics, with published research and recognized certifications in data analytics and cloud computing.
             </p>
           </div>
 

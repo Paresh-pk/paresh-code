@@ -39,19 +39,35 @@ const Projects: React.FC<ProjectsProps> = ({ isDark }) => {
       technologies: ["Java", "Android Studio", "Canvas API"],
       type: "Mobile Game",
       status: "Completed"
+    },
+    {
+      title: "House Price Prediction API using FastAPI and Machine Learning",
+      subtitle: "ML-Powered Prediction API",
+      description: "Developed a machine learning-powered API to predict median house values in California districts. Built using FastAPI with a Random Forest Regressor trained on the California Housing dataset. Includes a simple HTML frontend, robust data validation, and preprocessing to ensure accurate predictions. Endpoints include health check, model info, and prediction features.",
+      technologies: ["Python", "FastAPI", "Scikit-learn", "Random Forest"],
+      type: "Machine Learning",
+      status: "Completed"
+    },
+    {
+      title: "E-commerce Customer Segmentation using RFM Analysis",
+      subtitle: "Customer Analytics & Segmentation",
+      description: "Analyzed a large e-commerce dataset using RFM (Recency, Frequency, Monetary) model. Segmented customers into High Value, Loyal, and At-Risk groups. Applied Pareto Principle: discovered 26% of customers contribute 80% of revenue. Built a comprehensive visualization dashboard to guide business decision-making.",
+      technologies: ["Python", "RFM Analysis", "Data Visualization", "Pandas"],
+      type: "Data Analytics",
+      status: "Completed"
     }
   ];
 
   const ongoingProjects = [
     {
-      title: "On-going Project",
-      status: "Coming Soon",
-      description: "Exciting new data science project in development. Stay tuned for updates!"
+      title: "ARE YOU A CAT? — Production MLOps System",
+      status: "In Progress",
+      description: "End-to-end ML pipeline deployed for production with comprehensive MLOps practices."
     },
     {
-      title: "Ongoing Courses",
+      title: "Deep Learning — Udemy",
       status: "In Progress",
-      description: "Continuously learning new technologies and methodologies in data science and machine learning."
+      description: "Advanced deep learning course covering neural networks, CNNs, RNNs, and modern architectures."
     }
   ];
 

@@ -11,21 +11,21 @@ interface SkillsProps {
 const Skills: React.FC<SkillsProps> = ({ isDark }) => {
   const skillCategories = [
     {
-      title: 'Programming Languages',
+      title: 'Languages & Tools',
       icon: Code,
-      skills: ['Python', 'Java', 'C', 'SQL'],
+      skills: ['Python', 'SQL', 'C', 'PHP', 'HTML', 'CSS'],
       color: 'from-blue-500 to-purple-600'
     },
     {
-      title: 'Web Technologies',
+      title: 'Frameworks',
       icon: Globe,
-      skills: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+      skills: ['Jupyter', 'Power BI', 'Excel', 'Tableau', 'MySQL', 'LaTeX', 'Google Cloud Platform', 'BigQuery', 'NumPy', 'Pandas', 'Matplotlib', 'Scikit-learn', 'FastAPI', 'Overleaf', 'Google Colab', 'Docker'],
       color: 'from-green-500 to-teal-600'
     },
     {
-      title: 'Tools & Platforms',
+      title: 'Analysis & Modeling',
       icon: Wrench,
-      skills: ['MySQL', 'LaTeX', 'Git', 'Linux'],
+      skills: ['Data Cleaning', 'Exploratory Data Analysis', 'Visualization', 'Report Automation', 'Machine Learning', 'Regression Analysis', 'Statistical Modeling'],
       color: 'from-orange-500 to-red-600'
     }
   ];

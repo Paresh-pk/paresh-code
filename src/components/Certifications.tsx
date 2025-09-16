@@ -57,6 +57,16 @@ const Certifications: React.FC<CertificationsProps> = ({ isDark }) => {
         title: "Technology Apprenticeship Job Simulation",
         issuer: "Accenture – Forage Virtual Program",
         tag: "Forage"
+      },
+      {
+        title: "Data Analytics",
+        issuer: "Google",
+        tag: "Google"
+      },
+      {
+        title: "Machine Learning",
+        issuer: "Udemy",
+        tag: "Udemy"
       }
     ]
   };

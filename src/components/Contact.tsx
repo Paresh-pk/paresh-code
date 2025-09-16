@@ -10,8 +10,8 @@ const Contact: React.FC<ContactProps> = ({ isDark }) => {
   const contactInfo = [
     {
       label: 'Email',
-      value: 'pareshpalai.2124@gmail.com',
-      link: 'mailto:pareshpalai.2124@gmail.com',
+      value: 'palaiparesh3@gmail.com',
+      link: 'mailto:palaiparesh3@gmail.com',
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
           <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
