@@ -47,7 +47,7 @@ const About: React.FC<AboutProps> = ({
                   Interests
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {['Data Analysis', 'Machine Learning', 'Statistical Modeling', 'Data Visualization', 'Problem Solving'].map(interest => <span key={interest} className="px-3 py-1 bg-portfolio-accent/20 text-portfolio-accent rounded-full text-sm font-medium">
+                  {['Data Analysis', 'Machine Learning', 'Statistical Modeling', 'Data Visualization', 'Problem Solving', 'NLP', 'Deep Learning'].map(interest => <span key={interest} className="px-3 py-1 bg-portfolio-accent/20 text-portfolio-accent rounded-full text-sm font-medium">
                       {interest}
                     </span>)}
                 </div>

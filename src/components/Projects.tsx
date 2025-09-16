@@ -6,6 +6,17 @@ interface ProjectsProps {
   isDark: boolean;
 }
 
+interface Project {
+  title: string;
+  subtitle: string;
+  description: string;
+  technologies: string[];
+  type: string;
+  status: string;
+  titleLink?: string;
+  paperLink?: string;
+}
+
 const Projects: React.FC<ProjectsProps> = ({ isDark }) => {
   const projects = [
     {
@@ -14,7 +25,9 @@ const Projects: React.FC<ProjectsProps> = ({ isDark }) => {
       description: "Research on Q-Learning-based Energy-Efficient Custom Cooperative Routing Protocol for Underwater Wireless Sensor Networks. Published in Science & Technology Journal (Vol. 13, No. 1, ISSN 2321-3388).",
       technologies: ["Python", "NS2", "AquaSim", "Q-Learning"],
       type: "Research",
-      status: "Published"
+      status: "Published",
+      titleLink: "https://github.com/Paresh-pk/QEECCR",
+      paperLink: "https://drive.google.com/file/d/1z5qJ20RwMxfGN0eXQe3csRg_8IrSkoWJ/view"
     },
     {
       title: "Mathematical Modeling of QEECCR",
@@ -22,7 +35,8 @@ const Projects: React.FC<ProjectsProps> = ({ isDark }) => {
       description: "This project introduces a reinforcement learning (Q-learning) based routing protocol designed specifically for UWSNs (Underwater Wireless Sensor Networks), aiming to optimize energy consumption and enhance routing stability in complex underwater environments.",
       technologies: ["Python", "MATLAB", "Pandas"],
       type: "Research",
-      status: "Completed"
+      status: "Completed",
+      titleLink: "https://drive.google.com/file/d/1ZPM_NqS5KyU1wZt6_WTf4Djw77-Yaygn/view?usp=drive_link"
     },
     {
       title: "Online Library Management System",
@@ -46,7 +60,8 @@ const Projects: React.FC<ProjectsProps> = ({ isDark }) => {
       description: "Developed a machine learning-powered API to predict median house values in California districts. Built using FastAPI with a Random Forest Regressor trained on the California Housing dataset. Includes a simple HTML frontend, robust data validation, and preprocessing to ensure accurate predictions. Endpoints include health check, model info, and prediction features.",
       technologies: ["Python", "FastAPI", "Scikit-learn", "Random Forest"],
       type: "Machine Learning",
-      status: "Completed"
+      status: "Completed",
+      titleLink: "https://github.com/Paresh-pk/House-Price-Prediction-API-using-FastAPI-and-Machine-Learning"
     },
     {
       title: "E-commerce Customer Segmentation using RFM Analysis",
@@ -54,7 +69,8 @@ const Projects: React.FC<ProjectsProps> = ({ isDark }) => {
       description: "Analyzed a large e-commerce dataset using RFM (Recency, Frequency, Monetary) model. Segmented customers into High Value, Loyal, and At-Risk groups. Applied Pareto Principle: discovered 26% of customers contribute 80% of revenue. Built a comprehensive visualization dashboard to guide business decision-making.",
       technologies: ["Python", "RFM Analysis", "Data Visualization", "Pandas"],
       type: "Data Analytics",
-      status: "Completed"
+      status: "Completed",
+      titleLink: "https://github.com/Paresh-pk/E-commerce-Customer-Segmentation-using-RFM-Analysis-to-Drive-Targeted-Marketing-Strategies"
     }
   ];
 
@@ -102,7 +118,18 @@ const Projects: React.FC<ProjectsProps> = ({ isDark }) => {
                   </span>
                 </div>
                 <CardTitle className={`text-xl font-bold ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                  {project.title}
+                  {project.titleLink ? (
+                    <a 
+                      href={project.titleLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-portfolio-accent transition-colors duration-300"
+                    >
+                      {project.title}
+                    </a>
+                  ) : (
+                    project.title
+                  )}
                 </CardTitle>
                 <p className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                   {project.subtitle}
@@ -124,6 +151,16 @@ const Projects: React.FC<ProjectsProps> = ({ isDark }) => {
                     </span>
                   ))}
                 </div>
+                {project.paperLink && (
+                  <a 
+                    href={project.paperLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-portfolio-accent hover:text-portfolio-accent/80 transition-colors duration-300 text-sm font-medium"
+                  >
+                    Check out the paper →
+                  </a>
+                )}
               </CardContent>
             </Card>
           ))}

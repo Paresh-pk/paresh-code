@@ -47,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({ isDark }) => {
               <p className={`text-xl leading-relaxed animate-fade-in ${
                 isDark ? 'text-gray-300' : 'text-gray-600'
               }`} style={{animationDelay: '1.2s'}}>
-                Aspiring Data Analyst | Currently diving deep into Data Science to uncover patterns, predict outcomes, and drive decisions.
+                Freelance Software Engineer @ Fiverr | Machine Learning Engineer | Building & Deploying Models at Scale | Google-Certified Data Analyst
               </p>
             </div>
 
