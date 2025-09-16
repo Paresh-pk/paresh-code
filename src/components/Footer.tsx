@@ -23,7 +23,7 @@ const Footer: React.FC<FooterProps> = ({ isDark, toggleTheme }) => {
               Paresh Kumar Palai
             </h3>
             <p className={`${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-              Aspiring Data Analyst passionate about turning data into actionable insights.
+              Freelance Software Engineer @ Fiverr | Machine Learning Engineer | Building & Deploying Models at Scale | Google-Certified Data Analyst
             </p>
           </div>
           
